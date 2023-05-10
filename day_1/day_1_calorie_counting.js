@@ -1,4 +1,4 @@
-const data = require("../day_3/fetch_module");
+const data = require('../utils/fetch_module');
 const elf_calories = data.toString().split("\n");
 
 const elfCalories = elf_calories.reduce(

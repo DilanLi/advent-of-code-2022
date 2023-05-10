@@ -1,5 +1,4 @@
-const fs = require("fs");
-const dataStream = fs.readFileSync("input.txt", "utf-8");
+const dataStream = require("../utils/fetch_module");
 
 let leftOverStream = dataStream;
 let checkedStream = "";

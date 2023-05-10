@@ -1,7 +1,5 @@
-const fs = require("fs");
-const movingInstruction = fs
-  .readFileSync("moving_instruction.txt", "utf-8")
-  .split("\n");
+const data = require("../utils/fetch_module");
+const movingInstruction = data.split("\n");
 
 let stack = {
   1: ["Q", "F", "M", "R", "L", "W", "C", "V"],
@@ -14,18 +12,6 @@ let stack = {
   8: ["C", "P", "D", "M", "S"],
   9: ["Z", "N", "W", "T", "V", "M", "P", "C"],
 };
-
-// let stack = {
-//   1: ["Z", "N"],
-//   2: ["M", "C", "D"],
-//   3: ["P"],
-// };
-// const movingInstruction = [
-//   "move 1 from 2 to 1",
-//   "move 3 from 1 to 3",
-//   "move 2 from 2 to 1",
-//   "move 1 from 1 to 2",
-// ];
 
 function moveCrate(instruction) {
   const startingStack = instruction[1];
@@ -73,6 +59,8 @@ function deconstructMovingInstruction(instruction) {
 const formattedInstructionList = movingInstruction.map((instruction) =>
   deconstructMovingInstruction(instruction)
 );
+
+//pt.1
 // const letsMoveTheseCrates = formattedInstructionList.map((instruction) =>
 //   moveCrate(instruction)
 // );
@@ -85,6 +73,7 @@ const formattedInstructionList = movingInstruction.map((instruction) =>
 // }
 // console.log(topCrates)
 
+// pt.2
 const letsMoveTheseCratesPt2 = formattedInstructionList.map((instruction) =>
   moveMultipleCrates(instruction)
 );

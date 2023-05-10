@@ -70,5 +70,5 @@ const totalScore = scoreArray.reduce((accumulate, current) => {
   return accumulate + current;
 }, 0);
 
-console.log(formattedRounds);
+console.log(totalScore);
 

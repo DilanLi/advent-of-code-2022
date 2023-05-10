@@ -1,4 +1,4 @@
-const data = require("./fetch_module");
+const data = require('../utils/fetch_module')
 const itemsArray = data.split("\n");
 
 function findCommonItemType(item) {
